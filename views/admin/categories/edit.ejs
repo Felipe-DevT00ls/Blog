@@ -1,0 +1,13 @@
+<%- include("../../partials/header.ejs")%>
+<%- include("../../partials/navbar.ejs")%>
+    <div class="container">
+        <h2>Editar categoria:</h2>
+        <hr>
+
+        <form method="POST" action="/categories/updated">
+            <input name="id" type="hidden" value="<%=result.id%>"/>
+            <input name="title" value="<%=result.title%>"/>
+            <button class="btn btn-primary">Editar</button>
+        </form>
+    </div>
+<%- include("../../partials/footer.ejs")%>

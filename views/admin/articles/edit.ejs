@@ -1,0 +1,21 @@
+<%- include("../../partials/header.ejs")%>
+<%- include("../../partials/navbar.ejs")%>
+    <div class="container">
+        <h2>Editar Artigo:</h2>
+        <hr>
+
+        <form method="POST" action="/article/edit">
+            <input name="id" type="hidden" value="<%=data.id%>"/>
+            <input name="title" value="<%=data.title%>" class="form-control"/><br>
+            <textarea class="form-control" id="articles" name="body"><%= data.body%></textarea><br>
+            <button class="btn btn-primary">Editar</button>
+        </form>
+    </div>
+<%- include("../../partials/footer.ejs")%>
+<script src="/tinymce/tinymce.min.js"></script>
+<script>
+    tinymce.init({
+        language: "pt_BR",
+        selector: "#articles"
+    })
+</script>
