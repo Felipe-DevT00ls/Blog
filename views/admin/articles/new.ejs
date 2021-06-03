@@ -10,7 +10,7 @@
                 <form method="POST" action="/article/save">
                     <input type="text" name="title" placeholder="defina o titulo do Artigo...." class="form-control"><br>
                     <h2>Categoria</h2>
-                    <select name="category" class="form-select">
+                    <select name="category" class="form-select" required>
                         <% data.forEach((item)=>{  %> 
                             <option value="<%=item.id%>"><%=item.title%></option>
                         <%})%>
